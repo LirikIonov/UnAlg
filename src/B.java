@@ -68,7 +68,7 @@ public class B {
         boolean isFullyGenerated = false;
         for (int i = 0; !isFullyGenerated; i++) {
             int res = decToBinary(i);
-            char ch = (i < alphLen) ? alph.charAt(i): ((char) (alph.charAt(i % alphLen) + alphLen));
+            char ch = (i < alphLen) ? alph.charAt(i): ((char) (alph.charAt(i % alphLen) + alphLen + 1));
             String put = String.valueOf(ch);
             charToInt.put(put, res);
             intToChar.put(res, put);
