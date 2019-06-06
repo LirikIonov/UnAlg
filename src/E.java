@@ -6,7 +6,7 @@ public class E {
     PrintWriter out;
 
     void computations() throws Exception {
-        createInput("input.txt");
+        createInput("inputEn.txt");
         int n = in.nextInt() + 1;
         StringBuilder nStr = new StringBuilder(String.valueOf(n));
         int e = String.valueOf(n - (int) Math.pow(10, nStr.length() - 2)).length() - 1;
@@ -14,7 +14,7 @@ public class E {
         nStr = new StringBuilder(String.valueOf(n));
         int x = (n >= Math.pow(10, e)) ? nStr.length() - 1 : nStr.length();
         String res = nStr.substring(0, x) + nStr.reverse();
-        createOutput("output.txt");
+        createOutput("decrypted.txt");
         out.println(res);
         closeOutput(out);
     }
